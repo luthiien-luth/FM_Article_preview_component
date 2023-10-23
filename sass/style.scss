@@ -62,16 +62,17 @@ body {
 	&__info {
 		display: flex;
 		justify-content: space-between;
+	}
 
+	&__avatar {
 		.avatar {
 			border-radius: 50%;
 			width: 40px;
 		}
+	}
 
-		.info__datas {
-			margin-right: 60px;
-		}
-
+	&__datas {
+		margin-right: 60px;
 		.name {
 			color: $dark-gray-blue;
 			font-weight: bold;
@@ -80,6 +81,22 @@ body {
 
 		.date {
 			color: $gray-blue;
+		}
+	}
+
+	&__share {
+		position: relative;
+		width: 30px;
+		height: 30px;
+		margin-top: 4px;
+		border-radius: 50%;
+		background-color: $light-gray-blue;
+
+		.share {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 }
