@@ -16,7 +16,6 @@ html {
 body {
 	font-family: 'Manrope', sans-serif;
 	font-size: 1.3rem;
-
 	background-color: $light-gray-blue;
 	height: 100vh;
 	display: flex;
@@ -25,9 +24,18 @@ body {
 	align-items: center;
 }
 
+.title {
+	color: $dark-gray-blue;
+	font-size: 1.6rem;
+}
+
+.text {
+	padding: 0px 32px 20px 32px;
+	line-height: 1.5;
+}
+
 .article {
-	width: 335px;
-	height: 500px;
+	width: 330px;
 	background-color: #fff;
 	border-radius: 10px;
 	overflow: hidden;
@@ -44,35 +52,54 @@ body {
 	}
 
 	&__content {
-		padding: 35px 32px 0px 32px;
+		.title {
+			margin-bottom: 15px;
+			padding: 35px 32px 0px 32px;
+		}
+
+		.text {
+			color: $dark-blue;
+		}
 	}
 
-	&__title {
-		color: $dark-gray-blue;
-		font-size: 1.6rem;
-		margin-bottom: 15px;
-	}
-
-	&__text {
-		color: $dark-blue;
-		margin-bottom: 35px;
-		line-height: 1.5;
-	}
-
-	&__info {
+	&__footer {
 		display: flex;
 		justify-content: space-between;
-	}
+		align-items: center;
+		padding: 16px 32px;
 
+		.social-share {
+			display: none;
+		}
+
+		&.active {
+			background-color: $dark-gray-blue;
+			.profile {
+				display: none;
+			}
+			.social-share {
+				display: flex;
+			}
+			.share {
+				background-color: $dark-blue;
+				svg {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.profile {
+	display: flex;
 	&__avatar {
 		.avatar {
 			border-radius: 50%;
 			width: 40px;
 		}
 	}
-
 	&__datas {
-		margin-right: 60px;
+		padding: 0px 15px;
 		.name {
 			color: $dark-gray-blue;
 			font-weight: bold;
@@ -83,28 +110,53 @@ body {
 			color: $gray-blue;
 		}
 	}
+}
 
-	&__share {
-		position: relative;
-		width: 30px;
-		height: 30px;
-		margin-top: 4px;
-		border-radius: 50%;
-		background-color: $light-gray-blue;
+.share {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: $light-gray-blue;
+	cursor: pointer;
 
-		.share {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+	svg {
+		color: #6e8098;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.social-share {
+	display: flex;
+	align-items: center;
+	&__text {
+		letter-spacing: 4px;
+		color: $gray-blue;
+	}
+
+	&__platforms {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 8px;
+
+		.icon {
+			display: flex;
+			align-items: center;
+			color: #fff;
+			margin: auto 8px;
 		}
 	}
 }
 
-// display: flex;
-// flex-direction: column;
-// justify-content: center;
-// align-items: center;
+.icon {
+	cursor: pointer;
+}
+
+
 
 //     ## Layout
 

@@ -19,9 +19,18 @@ body {
   align-items: center;
 }
 
+.title {
+  color: hsl(217, 19%, 35%);
+  font-size: 1.6rem;
+}
+
+.text {
+  padding: 0px 32px 20px 32px;
+  line-height: 1.5;
+}
+
 .article {
-  width: 335px;
-  height: 500px;
+  width: 330px;
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -36,49 +45,94 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.article__content {
+.article__content .title {
+  margin-bottom: 15px;
   padding: 35px 32px 0px 32px;
 }
-.article__title {
-  color: hsl(217, 19%, 35%);
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-}
-.article__text {
+.article__content .text {
   color: hsl(214, 17%, 51%);
-  margin-bottom: 35px;
-  line-height: 1.5;
 }
-.article__info {
+.article__footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
 }
-.article__avatar .avatar {
+.article__footer .social-share {
+  display: none;
+}
+.article__footer.active {
+  background-color: hsl(217, 19%, 35%);
+}
+.article__footer.active .profile {
+  display: none;
+}
+.article__footer.active .social-share {
+  display: flex;
+}
+.article__footer.active .share {
+  background-color: hsl(214, 17%, 51%);
+}
+.article__footer.active .share svg {
+  color: #fff;
+}
+
+.profile {
+  display: flex;
+}
+.profile__avatar .avatar {
   border-radius: 50%;
   width: 40px;
 }
-.article__datas {
-  margin-right: 60px;
+.profile__datas {
+  padding: 0px 15px;
 }
-.article__datas .name {
+.profile__datas .name {
   color: hsl(217, 19%, 35%);
   font-weight: bold;
   margin-bottom: 2px;
 }
-.article__datas .date {
+.profile__datas .date {
   color: hsl(212, 23%, 69%);
 }
-.article__share {
+
+.share {
   position: relative;
   width: 30px;
   height: 30px;
-  margin-top: 4px;
   border-radius: 50%;
   background-color: hsl(210, 46%, 95%);
+  cursor: pointer;
 }
-.article__share .share {
+.share svg {
+  color: #6e8098;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.social-share {
+  display: flex;
+  align-items: center;
+}
+.social-share__text {
+  letter-spacing: 4px;
+  color: hsl(212, 23%, 69%);
+}
+.social-share__platforms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8px;
+}
+.social-share__platforms .icon {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin: auto 8px;
+}
+
+.icon {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

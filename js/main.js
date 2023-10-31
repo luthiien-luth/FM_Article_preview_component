@@ -1,0 +1,1 @@
+const articleShare = document.querySelector('.article-share');
