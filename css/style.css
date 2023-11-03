@@ -57,6 +57,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 32px;
+  transition: background-color ease-in 200ms;
 }
 .article__footer .social-share {
   display: none;
@@ -115,6 +116,7 @@ body {
 .social-share {
   display: flex;
   align-items: center;
+  padding: 12px 0;
 }
 .social-share__text {
   letter-spacing: 4px;
